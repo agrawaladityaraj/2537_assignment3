@@ -2,26 +2,6 @@ import React from "react";
 import { Card, Typography, Box, Button } from "@mui/joy";
 
 function Pokemon(props) {
-  // const [pokemon, setPokemon] = useState({
-  //   abilities: [],
-  //   stats: [],
-  //   types: [],
-  // });
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const pokeResult = await axios.get(
-  //       `https://pokeapi.co/api/v2/pokemon/${props.id}/`
-  //     );
-  //     setPokemon({
-  //       abilities: pokeResult.data.abilities,
-  //       stats: pokeResult.data.stats,
-  //       types: pokeResult.data.types,
-  //     });
-  //   })();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
-
   return (
     <Card variant="outlined">
       <Typography level="h2" fontSize="md" sx={{ mb: 0.5 }}>
@@ -42,6 +22,7 @@ function Pokemon(props) {
           color="primary"
           aria-label="More"
           sx={{ ml: "auto", fontWeight: 600 }}
+          onClick={() => props.openModal(props.id, props.name)}
         >
           More
         </Button>

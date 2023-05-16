@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.wrapper > * {
+  margin-bottom: 2em;
+}
+
 .filters {
   display: flex;
   justify-content: center;
