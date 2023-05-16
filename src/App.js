@@ -148,7 +148,8 @@ function App() {
         <Box sx={{ textAlign: "center" }}>
           <Typography>Total Pokémon: {filteredPokemons.length}</Typography>
           <Typography>
-            Showing {(page - 1) * 10 + 1} - {page * 10}
+            Showing {(page - 1) * 10 + 1} -{" "}
+            {page * 10 ? filteredPokemons.length : page * 10}
           </Typography>
         </Box>
         <Grid sx={{ mb: "2em" }} container spacing={2}>
